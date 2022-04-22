@@ -1,3 +1,4 @@
+import os
 os.system ('git pull')
 if __name__ == "__main__":
 	try:
